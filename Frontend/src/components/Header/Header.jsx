@@ -1,4 +1,4 @@
-import "./Header.jsx";
+import "./Header.css";
 
 function Header() {
   return (
