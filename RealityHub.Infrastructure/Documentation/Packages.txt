@@ -1,0 +1,5 @@
+﻿✅ Microsoft.EntityFrameworkCore: um ORM que permite mapear tabelas como classes C#, criar consultas LINQ, fazer o CRUD no banco sem escrever SQL diretamente.
+
+✅ Npgsql.EntityFrameworkCore.PostgreSQL: provider para Postgres, precisa dele para o EF Core se conectarem e traduzir os comandos.
+
+✅ Microsoft.EntityFrameworkCore.Design: usado para gerar e aplicar Migrations
