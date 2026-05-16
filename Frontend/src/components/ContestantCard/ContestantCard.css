@@ -1,6 +1,6 @@
 .card {
   width: 320px;
-  height: 460px;
+  height: 350px;
 
   border-radius: 24px;
   overflow: hidden;
@@ -34,21 +34,20 @@
 
   padding: 24px;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95),
-    rgba(0, 0, 0, 0.1)
-  );
+  background: #833AB4;
+  background: linear-gradient(360deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 40%, rgba(245, 166, 56, 1) 90%);
 }
 
 .overlay span {
-  color: #8b5cf6;
+  color: #FBE1BB;
   text-transform: uppercase;
   font-size: 0.8rem;
+  font-family: 'Baloo 2', sans-serif;
   letter-spacing: 1px;
 }
 
 .overlay h2 {
+  
   color: white;
   margin: 8px 0 20px;
 }
@@ -60,7 +59,7 @@
   border: none;
   border-radius: 12px;
 
-  background: #8b5cf6;
+  background: #ba51ff;
   color: white;
 
   font-size: 1rem;
@@ -71,10 +70,10 @@
 }
 
 .overlay button:hover {
-  background: #7c3aed;
+  background: #833AB4;
 }
 
 .overlay button:disabled {
-  background: #444;
+  background: #483748;
   cursor: not-allowed;
 }
