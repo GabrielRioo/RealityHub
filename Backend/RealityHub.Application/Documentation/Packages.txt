@@ -1,0 +1,7 @@
+﻿Documentação para explicação de cada pacote no projeto:
+
+- MediatR: serve para desacoplar a aplicação, evitando que um controller chame diretamente um service específico.
+
+- FluetValidation: fazer validações de objetos (DTOs, Commands, Requests) de forma mais organizada e legível.
+
+- FluentValidation.DependencyInjectionExtensions: Complemento da FluentValidation, serve para integra-lo com o Dependency Injection do .NET
