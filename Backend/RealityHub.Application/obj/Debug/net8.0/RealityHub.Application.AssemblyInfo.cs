@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealityHub.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5ab42483331ae4b8f68727742c5f84753ae1f20")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealityHub.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealityHub.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
