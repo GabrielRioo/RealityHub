@@ -3,3 +3,5 @@
 ✅ Npgsql.EntityFrameworkCore.PostgreSQL: provider para Postgres, precisa dele para o EF Core se conectarem e traduzir os comandos.
 
 ✅ Microsoft.EntityFrameworkCore.Design: usado para gerar e aplicar Migrations
+
+✅ Microsoft.EntityFrameworkCore.Tools: 

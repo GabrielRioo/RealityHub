@@ -9,12 +9,20 @@
   <ItemGroup>
     <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.27">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RealityHub.Application\RealityHub.Application.csproj" />
-    <ProjectReference Include="..\..\RealityHub.Infrastructure\RealityHub.Infrastructure.csproj" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RealityHub.Application\RealityHub.Application.csproj" />
+    <ProjectReference Include="..\RealityHub.Infrastructure\RealityHub.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

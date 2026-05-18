@@ -1,3 +1,5 @@
 ﻿✅ Microsoft.AspNetCore.Authentication.JwtBearer: adiciona suporte para autenticação usando JWT
 
 ✅ AspNetCoreRateLimit: serve para implementar Rate Limit
+
+✅ Microsoft.EntityFrameworkCore.Design: 
