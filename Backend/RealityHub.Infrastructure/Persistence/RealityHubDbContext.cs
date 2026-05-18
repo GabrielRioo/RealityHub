@@ -15,6 +15,9 @@ namespace RealityHub.Infrastructure.Persistence
         public DbSet<Participant> Participants => Set<Participant>();
         public DbSet<Round> Rounds => Set<Round>();
         public DbSet<Vote> Votes => Set<Vote>();
+        public DbSet<User> Users => Set<User>();
+        public DbSet<RoundParticipant> RoundParticipants => Set<RoundParticipant>();
+
         public DbSet<VoteAttemptLog> VoteAttemptLogs => Set<VoteAttemptLog>();
     }
 }

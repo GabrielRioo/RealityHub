@@ -14,7 +14,6 @@
     <Folder Include="DTOs\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Mappers\" />
-    <Folder Include="UseCases\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -38,6 +38,17 @@ namespace RealityHub.Infrastructure.Persistence
 
             await context.Rounds.AddAsync(round);
 
+            var roundParticipants = new List<RoundParticipant>
+            {
+                new RoundParticipant { Id = Guid.NewGuid(), ParticipantId = participants[0].Id, RoundId = round.Id, JoinedAt = round.StartAt, IsEliminated = false},
+                new RoundParticipant { Id = Guid.NewGuid(), ParticipantId = participants[1].Id, RoundId = round.Id, JoinedAt = round.StartAt, IsEliminated = false},
+                new RoundParticipant { Id = Guid.NewGuid(), ParticipantId = participants[2].Id, RoundId = round.Id, JoinedAt = round.StartAt, IsEliminated = false},
+                new RoundParticipant { Id = Guid.NewGuid(), ParticipantId = participants[3].Id, RoundId = round.Id, JoinedAt = round.StartAt, IsEliminated = true}
+            };
+
+            await context.AddRangeAsync(roundParticipants);
+
             await context.SaveChangesAsync();
         }
     }
+}
