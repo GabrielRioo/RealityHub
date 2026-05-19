@@ -1,5 +1,9 @@
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using RealityHub.Api.Services;
+using RealityHub.Application.Interfaces;
 using RealityHub.Infrastructure.Persistence;
+using RealityHub.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +19,24 @@ builder.Services.AddDbContext<RealityHubDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(RealityHub.Application.UseCases.Votes.CastVote.CastVoteCommand).Assembly);
+});
+
+builder.Services.AddValidatorsFromAssembly(typeof(RealityHub.Application.UseCases.Votes.CastVote.CastVoteCommandValidator).Assembly);
+
+builder.Services.AddScoped<IRoundRepository, RoundRepository>();
+builder.Services.AddScoped<IParticipantRepository, ParticipantRepository>();
+builder.Services.AddScoped<IRoundParticipantRepository, RoundParticipantRepository>();
+builder.Services.AddScoped<IVoteRepository, VoteRepository>();
+builder.Services.AddScoped<IVoteAttemptLogRepository, VoteAttemptLogRepository>();
+
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+builder.Services.AddScoped<IRequestMetadataService, RequestMetadataService>();
 
 var app = builder.Build();
 

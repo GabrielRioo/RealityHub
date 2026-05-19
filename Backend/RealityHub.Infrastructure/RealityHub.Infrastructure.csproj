@@ -14,7 +14,6 @@
   <ItemGroup>
     <Folder Include="Auth Integrations\" />
     <Folder Include="External Implementations\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

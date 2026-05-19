@@ -39,11 +39,15 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
 
         public async Task<CastVoteResult> Handle(CastVoteCommand request, CancellationToken cancellationToken)
         {
+            // Obter quem está votando
             var userId = _currentUserService.GetUserId();
+
+            // Obter dados do request (anti-bot)
             var ip = _requestMetadataService.GetIpAddress();
             var userAgent = _requestMetadataService.GetUserAgent();
 
             // Buscar round aberto
+            #region GetRound
             var round = await _roundRepository.GetCurrentOpenRoundAsync();
 
             if (round is null)
@@ -56,8 +60,10 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
                     Message = "Não tem round aberto neste momento."
                 };
             }
+            #endregion
 
             // Validar se o participante existe e está ativo.
+            #region GetActiveParticipant
             var participant = await _participantRepository.GetByIdAsync(request.ParticipantId);
 
             if (participant is null || participant.IsActive == false)
@@ -70,8 +76,10 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
                     Message = "Participante Inválido."
                 };
             }
+            #endregion
 
             // Validar se o participante está no round.
+            #region IsParticipantInRound
             var isParticipantInRound = await _roundParticipantRepository.ExistisAsync(round.Id, participant.Id);
 
             if (!isParticipantInRound)
@@ -84,8 +92,10 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
                     Message = "Este participante não está neste round atual."
                 };
             }
+            #endregion
 
             // Verificar cooldown (2 minutos)
+            #region Cooldown
             var lastVoteTime = await _voterRepository.GetLastVoteTimeAsync(userId, round.Id);
 
             if (lastVoteTime.HasValue)
@@ -107,8 +117,10 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
                     };
                 }
             }
+            #endregion
 
             // Criar voto
+            #region AddVote
             var vote = new Vote
             {
                 Id = Guid.NewGuid(),
@@ -119,6 +131,7 @@ namespace RealityHub.Application.UseCases.Votes.CastVote
             };
 
             await _voterRepository.AddAsync(vote);
+            #endregion
 
             // Registrar tentativa de voto (sucesso)
             await RegisterAttempt(userId, ip, userAgent, true, "Voto registrado");
