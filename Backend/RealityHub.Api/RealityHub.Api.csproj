@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RealityHub.Application\RealityHub.Application.csproj" />
     <ProjectReference Include="..\RealityHub.Infrastructure\RealityHub.Infrastructure.csproj" />
   </ItemGroup>
