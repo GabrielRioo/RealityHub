@@ -14,7 +14,7 @@ namespace RealityHub.Infrastructure.Persistence
         public static async Task SeedAsync(RealityHubDbContext context)
         {
             // Se já existir algum participante, significa que já foi seedado.
-            if (context.Participants.Any())
+            if (context.Participants.Any() ||  context.Rounds.Any())
                 return;
 
             var participants = new List<Participant>

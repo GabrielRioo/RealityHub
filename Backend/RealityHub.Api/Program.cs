@@ -35,7 +35,8 @@ builder.Services.AddScoped<IRoundParticipantRepository, RoundParticipantReposito
 builder.Services.AddScoped<IVoteRepository, VoteRepository>();
 builder.Services.AddScoped<IVoteAttemptLogRepository, VoteAttemptLogRepository>();
 
-builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+//builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+builder.Services.AddScoped<ICurrentUserService, FakeCurrentUserService>();
 builder.Services.AddScoped<IRequestMetadataService, RequestMetadataService>();
 
 var app = builder.Build();
