@@ -14,5 +14,8 @@ namespace RealityHub.Domain.Entities
         public DateTime StartAt { get; set; }
         public DateTime EndsAt { get; set; }
         public EnumRoundStatus Status { get; set; } = EnumRoundStatus.Open;
+
+        // Navigation Properties
+        public ICollection<Vote> Votes { get; set; } = new List<Vote>();
     }
 }

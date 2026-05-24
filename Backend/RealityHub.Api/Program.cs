@@ -33,6 +33,7 @@ builder.Services.AddScoped<IRoundRepository, RoundRepository>();
 builder.Services.AddScoped<IParticipantRepository, ParticipantRepository>();
 builder.Services.AddScoped<IRoundParticipantRepository, RoundParticipantRepository>();
 builder.Services.AddScoped<IVoteRepository, VoteRepository>();
+builder.Services.AddScoped<IVoteReadRepository, VoteReadRepository>();
 builder.Services.AddScoped<IVoteAttemptLogRepository, VoteAttemptLogRepository>();
 
 //builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();

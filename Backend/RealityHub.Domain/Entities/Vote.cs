@@ -13,5 +13,9 @@ namespace RealityHub.Domain.Entities
         public Guid ParticipantId { get; set; }
         public Guid UserId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        //Navigation Properties
+        public Participant Participant { get; set; } = null!;
+        public Round Round { get; set; } = null!;
     }
 }
