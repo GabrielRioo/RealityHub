@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RealityHub.Application.Interfaces
+{
+    public interface ICurrentUserService
+    {
+        // retornar o Id do usuário atual
+        Guid GetUserId();
+    }
+}
