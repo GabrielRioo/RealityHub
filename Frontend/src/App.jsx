@@ -35,7 +35,17 @@ function App() {
       <Header />
 
       <main className="container">
+
+        <div className="principal">
+          <span>Ao vivo agora</span>
+
+          <h1>Vote.</h1>
+          <h1><strong>Domine.</strong></h1>
+          <h1>Divirta-se.</h1>
+        </div>
+
         <div className="hero">
+
           <span>Paredão Decisivo</span>
 
           <h1>Quem deve deixar a casa?</h1>
