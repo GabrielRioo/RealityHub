@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fef4e7;
+  color: #FD1D1D;
+
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.principal {
+  text-transform: uppercase;
+  height: 100vh;
+}
+
+.principal span {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 8px 16px;
+
+  border-radius: 999px;
+  background-color: rgba(253, 29, 29, 0.15);
+  border: 1px solid #FD1D1D;
+
+  color: #FD1D1D;
+  font-weight: 500;
+}
+
+.principal h1 {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 7rem;
+  letter-spacing: -4px;
+
+  & strong {
+    background: linear-gradient(
+    305deg,
+    rgba(131, 58, 180, 1) 9%, 
+    rgba(253, 29, 29, 1) 49%, 
+    rgba(245, 166, 56, 1) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+}
+
+.hero, 
+.principal {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero span {
+  display: inline-block;
+
+  margin-bottom: 16px;
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(246, 190, 92, 0.15);
+  color: #F2930D;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #FD1D1D;
+  font-weight: 500;
+  
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
