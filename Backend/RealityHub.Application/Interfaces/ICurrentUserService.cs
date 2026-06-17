@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RealityHub.Application.Interfaces
 {
-    internal class ICurrentUserService
+    public interface ICurrentUserService
     {
+        // retornar o Id do usuário atual
+        Guid GetUserId();
     }
 }

@@ -12,5 +12,8 @@ namespace RealityHub.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string PhotoUrl { get; set; } = string.Empty;
         public bool IsActive { get; set; } = true;
+
+        // Navigation properties
+        public ICollection<Vote> Votes { get; set; } = new List<Vote>();    
     }
 }

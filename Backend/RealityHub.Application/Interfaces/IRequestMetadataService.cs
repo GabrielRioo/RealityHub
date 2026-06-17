@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RealityHub.Application.Interfaces
 {
-    internal class IRequestMetadataService
+    public interface IRequestMetadataService
     {
+        // identifica o usuário na rede
+        string GetIpAddress();
+
+        // identifica navegador/dispositivo
+        string GetUserAgent();
     }
 }
