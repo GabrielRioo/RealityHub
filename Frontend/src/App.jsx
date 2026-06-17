@@ -35,7 +35,20 @@ function App() {
       <Header />
 
       <main className="container">
+
+        <div className="principal">
+          <span>Ao vivo agora</span>
+
+          <h1>Vote.</h1>
+          <h1><strong>Domine.</strong></h1>
+          <h1>Divirta-se.</h1>
+          <div className="subtitle">
+            <h3>A plataforma definitiva de reality shows. Vote nos seus favoritos, acompanhe o queridômetro em tempo real e mergulhe de cabeça na experiência.</h3>
+          </div>
+        </div>
+
         <div className="hero">
+
           <span>Paredão Decisivo</span>
 
           <h1>Quem deve deixar a casa?</h1>
